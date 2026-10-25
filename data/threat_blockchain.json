@@ -1,0 +1,275 @@
+[
+  {
+    "index": 0,
+    "timestamp": "2026-10-25T14:41:13.768389+00:00",
+    "data": {
+      "message": "OSINT-MLBC blockchain initialized"
+    },
+    "previous_hash": "0",
+    "hash": "b93f19c25eaa0781afec3f355a69996b3b3980ba8cad4ddd0d3d07fc9a42b168"
+  },
+  {
+    "index": 1,
+    "timestamp": "2026-10-25T14:43:27.300931+00:00",
+    "data": {
+      "source": "CISA KEV",
+      "cve": "CVE-2025-0001",
+      "category": "sql_injection",
+      "ml_prediction": "sql_injection"
+    },
+    "previous_hash": "b93f19c25eaa0781afec3f355a69996b3b3980ba8cad4ddd0d3d07fc9a42b168",
+    "hash": "662d414cdab400d72688579f2d18db424aca605440fad9f78f0d7fa70f9041b5"
+  },
+  {
+    "index": 2,
+    "timestamp": "2026-10-25T14:43:46.120318+00:00",
+    "data": {
+      "source": "CISA KEV",
+      "cve": "CVE-2025-0001",
+      "category": "sql_injection",
+      "ml_prediction": "sql_injection"
+    },
+    "previous_hash": "662d414cdab400d72688579f2d18db424aca605440fad9f78f0d7fa70f9041b5",
+    "hash": "696ac8e1284cfc96c41dc99344709b2ce8811b6bd7e0511e6225265bee896af1"
+  },
+  {
+    "index": 3,
+    "timestamp": "2026-10-25T14:44:39.191226+00:00",
+    "data": {
+      "source": "CISA KEV",
+      "cve": "CVE-2026-114625",
+      "vulnerability_name": "Arista VeloCloud Orchestrator SQL Injection Vulnerability",
+      "ml_category": "sql_injection"
+    },
+    "previous_hash": "696ac8e1284cfc96c41dc99344709b2ce8811b6bd7e0511e6225265bee896af1",
+    "hash": "c3e3255babf5b1b8b372a1838fc32381f80244e35814d4f8b67d03675db82437"
+  },
+  {
+    "index": 4,
+    "timestamp": "2026-10-25T14:44:39.193971+00:00",
+    "data": {
+      "source": "CISA KEV",
+      "cve": "CVE-2026-110447",
+      "vulnerability_name": "Collabora Online – Built-in CODE Server OS Command Injection Vulnerability",
+      "ml_category": "command_injection"
+    },
+    "previous_hash": "c3e3255babf5b1b8b372a1838fc32381f80244e35814d4f8b67d03675db82437",
+    "hash": "d856d87a28ffb8500311982b185821ce1046f2060b9f38958ae1184b43749b2f"
+  },
+  {
+    "index": 5,
+    "timestamp": "2026-10-25T14:44:39.196181+00:00",
+    "data": {
+      "source": "CISA KEV",
+      "cve": "CVE-2026-106931",
+      "vulnerability_name": "EG Secure Solutions SiteGuard Server Edition OS Command Injection Vulnerability",
+      "ml_category": "command_injection"
+    },
+    "previous_hash": "d856d87a28ffb8500311982b185821ce1046f2060b9f38958ae1184b43749b2f",
+    "hash": "ce3bf558cb20ccfd592c0ef324a75a955c52e4fee11312794948bad3a1491e8d"
+  },
+  {
+    "index": 6,
+    "timestamp": "2026-10-25T14:44:39.198139+00:00",
+    "data": {
+      "source": "CISA KEV",
+      "cve": "CVE-2026-96656",
+      "vulnerability_name": "Plex Media Server External Control of File Name or Path Vulnerability",
+      "ml_category": "other"
+    },
+    "previous_hash": "ce3bf558cb20ccfd592c0ef324a75a955c52e4fee11312794948bad3a1491e8d",
+    "hash": "dd2e6bd7d3f7a74f0882e46b635c000dccd31e08f3149e7c9c50002764061d61"
+  },
+  {
+    "index": 7,
+    "timestamp": "2026-10-25T14:44:39.200105+00:00",
+    "data": {
+      "source": "CISA KEV",
+      "cve": "CVE-2026-96655",
+      "vulnerability_name": "Plex Media Server Server-Side Request Forgery (SSRF) Vulnerability",
+      "ml_category": "other"
+    },
+    "previous_hash": "dd2e6bd7d3f7a74f0882e46b635c000dccd31e08f3149e7c9c50002764061d61",
+    "hash": "b071a0871dec0ebc1d3ccfc55543dc2a1a6f62fde119b6d24d278ec514d7f19d"
+  },
+  {
+    "index": 8,
+    "timestamp": "2026-10-25T14:44:39.201785+00:00",
+    "data": {
+      "source": "CISA KEV",
+      "cve": "CVE-2026-96654",
+      "vulnerability_name": "Plex Media Server Improper Neutralization of Encoded URI Schemes in a Web Page Vulnerability",
+      "ml_category": "other"
+    },
+    "previous_hash": "b071a0871dec0ebc1d3ccfc55543dc2a1a6f62fde119b6d24d278ec514d7f19d",
+    "hash": "6884347ab1cb969d2789e6e5944c9739cd4bda1e874272ffda556b5608187f65"
+  },
+  {
+    "index": 9,
+    "timestamp": "2026-10-25T14:44:39.203758+00:00",
+    "data": {
+      "source": "CISA KEV",
+      "cve": "CVE-2026-96652",
+      "vulnerability_name": "Plex Media Server Server-Side Request Forgery (SSRF) Vulnerability",
+      "ml_category": "other"
+    },
+    "previous_hash": "6884347ab1cb969d2789e6e5944c9739cd4bda1e874272ffda556b5608187f65",
+    "hash": "752d713195d4c11d781ec744b54e0e3649830a55ee2e3787a6ed54d27adeac68"
+  },
+  {
+    "index": 10,
+    "timestamp": "2026-10-25T14:44:39.205508+00:00",
+    "data": {
+      "source": "CISA KEV",
+      "cve": "CVE-2026-110936",
+      "vulnerability_name": "Siemens Software Center Uncontrolled Search Path Element Vulnerability",
+      "ml_category": "other"
+    },
+    "previous_hash": "752d713195d4c11d781ec744b54e0e3649830a55ee2e3787a6ed54d27adeac68",
+    "hash": "9bfeb92831ce19e19b4927a76ffa3511c304b6ffd6d9187d7d963afbc96c164f"
+  },
+  {
+    "index": 11,
+    "timestamp": "2026-10-25T14:44:39.207401+00:00",
+    "data": {
+      "source": "CISA KEV",
+      "cve": "CVE-2026-102764",
+      "vulnerability_name": "BeyondTrust Remote Support Authentication Bypass by Spoofing Vulnerability",
+      "ml_category": "authentication"
+    },
+    "previous_hash": "9bfeb92831ce19e19b4927a76ffa3511c304b6ffd6d9187d7d963afbc96c164f",
+    "hash": "96c1d5e56eac6666053939eb899bbfc03416d1adcd7c13a7ade7d7770bab7f2a"
+  },
+  {
+    "index": 12,
+    "timestamp": "2026-10-25T14:44:39.209372+00:00",
+    "data": {
+      "source": "CISA KEV",
+      "cve": "CVE-2025-61624",
+      "vulnerability_name": "Fortinet Multiple Products Path Traversal Vulnerability",
+      "ml_category": "path_traversal"
+    },
+    "previous_hash": "96c1d5e56eac6666053939eb899bbfc03416d1adcd7c13a7ade7d7770bab7f2a",
+    "hash": "d068e1ba16a621cd5a618661e7693451005892185a172b0e2af0a281996ef01e"
+  },
+  {
+    "index": 13,
+    "timestamp": "2026-10-25T14:44:39.211513+00:00",
+    "data": {
+      "source": "CISA KEV",
+      "cve": "CVE-2026-21589",
+      "vulnerability_name": "Atlassian Multiple Products Files or Directories Accessible to External Parties Vulnerability",
+      "ml_category": "other"
+    },
+    "previous_hash": "d068e1ba16a621cd5a618661e7693451005892185a172b0e2af0a281996ef01e",
+    "hash": "afbe7be5d150213d8cc1f0af523b04ff05c7d930d52d9415cab47973d1f84a8e"
+  },
+  {
+    "index": 14,
+    "timestamp": "2026-10-25T14:44:39.213613+00:00",
+    "data": {
+      "source": "CISA KEV",
+      "cve": "CVE-2026-105134",
+      "vulnerability_name": "Ahsay AhsayCBS Command Injection Vulnerability",
+      "ml_category": "command_injection"
+    },
+    "previous_hash": "afbe7be5d150213d8cc1f0af523b04ff05c7d930d52d9415cab47973d1f84a8e",
+    "hash": "18598695bc01d7219609cc80ac6c341d2b47ecbf980d0393a9019e973407d447"
+  },
+  {
+    "index": 15,
+    "timestamp": "2026-10-25T14:44:39.215642+00:00",
+    "data": {
+      "source": "CISA KEV",
+      "cve": "CVE-2026-76519",
+      "vulnerability_name": "Cisco Secure Email Gateway Relative Path Traversal Vulnerability",
+      "ml_category": "path_traversal"
+    },
+    "previous_hash": "18598695bc01d7219609cc80ac6c341d2b47ecbf980d0393a9019e973407d447",
+    "hash": "4e3c0ea891640d815e96752b6e778c2bc4eb124019c0bea3cff2649a80bc7874"
+  },
+  {
+    "index": 16,
+    "timestamp": "2026-10-25T14:44:39.217472+00:00",
+    "data": {
+      "source": "CISA KEV",
+      "cve": "CVE-2026-105133",
+      "vulnerability_name": "Ahsay AhsayCBS Improper Authentication Vulnerability",
+      "ml_category": "authentication"
+    },
+    "previous_hash": "4e3c0ea891640d815e96752b6e778c2bc4eb124019c0bea3cff2649a80bc7874",
+    "hash": "cb57a2cdf8a3d95322904fe6a8c4f79f602359ca3e2747118fe2326ab2fc84c4"
+  },
+  {
+    "index": 17,
+    "timestamp": "2026-10-25T14:44:39.219405+00:00",
+    "data": {
+      "source": "CISA KEV",
+      "cve": "CVE-2026-0322",
+      "vulnerability_name": "Palo Alto Networks PAN-OS Code Injection Vulnerability",
+      "ml_category": "other"
+    },
+    "previous_hash": "cb57a2cdf8a3d95322904fe6a8c4f79f602359ca3e2747118fe2326ab2fc84c4",
+    "hash": "a817a8ca5e13ac02675311c6564503d9eb66b83f759273fe37128c54560447b2"
+  },
+  {
+    "index": 18,
+    "timestamp": "2026-10-25T14:44:39.221185+00:00",
+    "data": {
+      "source": "CISA KEV",
+      "cve": "CVE-2026-104935",
+      "vulnerability_name": "Ivanti Connect Secure Authentication Bypass by Spoofing Vulnerability",
+      "ml_category": "authentication"
+    },
+    "previous_hash": "a817a8ca5e13ac02675311c6564503d9eb66b83f759273fe37128c54560447b2",
+    "hash": "7f663c72070eba5d2ddd32bcdc0a8ec84d862aebb68d0ddac823d279274a6698"
+  },
+  {
+    "index": 19,
+    "timestamp": "2026-10-25T14:44:39.223159+00:00",
+    "data": {
+      "source": "CISA KEV",
+      "cve": "CVE-2026-96951",
+      "vulnerability_name": "Microsoft Windows Command Injection Vulnerability",
+      "ml_category": "command_injection"
+    },
+    "previous_hash": "7f663c72070eba5d2ddd32bcdc0a8ec84d862aebb68d0ddac823d279274a6698",
+    "hash": "0a48e0c09ac40e991d4ecef690e7486e255231037fe2ade8af6efa5aa5c5aa78"
+  },
+  {
+    "index": 20,
+    "timestamp": "2026-10-25T14:44:39.225228+00:00",
+    "data": {
+      "source": "CISA KEV",
+      "cve": "CVE-2015-5477",
+      "vulnerability_name": " ISC BIND Data Processing Errors Vulnerability",
+      "ml_category": "other"
+    },
+    "previous_hash": "0a48e0c09ac40e991d4ecef690e7486e255231037fe2ade8af6efa5aa5c5aa78",
+    "hash": "0513123ac3ce6d452dc7c9648a2140bb4f557ef063a977d1f8fa7b105f82a783"
+  },
+  {
+    "index": 21,
+    "timestamp": "2026-10-25T14:44:39.227186+00:00",
+    "data": {
+      "source": "CISA KEV",
+      "cve": "CVE-2016-3081",
+      "vulnerability_name": "Apache Struts Command Injection Vulnerability",
+      "ml_category": "command_injection"
+    },
+    "previous_hash": "0513123ac3ce6d452dc7c9648a2140bb4f557ef063a977d1f8fa7b105f82a783",
+    "hash": "d2d4d0d13bbf8e78ec6a16f16baffc0975e9d1cfb09ad6e7f4eb1245b5544c41"
+  },
+  {
+    "index": 22,
+    "timestamp": "2026-10-25T14:44:39.229395+00:00",
+    "data": {
+      "source": "CISA KEV",
+      "cve": "CVE-2023-22894",
+      "vulnerability_name": "Strapi Cleartext Storage of Sensitive Information Vulnerability",
+      "ml_category": "information_disclosure"
+    },
+    "previous_hash": "d2d4d0d13bbf8e78ec6a16f16baffc0975e9d1cfb09ad6e7f4eb1245b5544c41",
+    "hash": "74e4847f9712d43f93eed4a0bb624e0ccc2184769550fd39d8fb2a177954271c"
+  }
+]

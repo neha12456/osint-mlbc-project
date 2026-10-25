@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSINT-MLBC | Threat Intelligence</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0b1120;
+            color: #e5e7eb;
+        }
+        header {
+            padding: 24px 6%;
+            background: #111c30;
+            border-bottom: 1px solid #263449;
+        }
+        header h1 { margin: 0; color: #60a5fa; }
+        header p { color: #9ca3af; margin-bottom: 0; }
+        main { padding: 28px 6%; }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            margin-bottom: 26px;
+        }
+        .card, .panel {
+            background: #111c30;
+            border: 1px solid #263449;
+            border-radius: 12px;
+            padding: 20px;
+        }
+        .card span { color: #9ca3af; font-size: 14px; }
+        .card h2 { color: #60a5fa; margin-bottom: 0; }
+        .status { color: #4ade80; }
+        .warning { color: #fbbf24; }
+        .toolbar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+        input, select {
+            background: #111c30;
+            color: #e5e7eb;
+            border: 1px solid #40516a;
+            border-radius: 8px;
+            padding: 12px;
+            font-size: 15px;
+        }
+        input { flex: 1; min-width: 200px; }
+        .table-wrap { overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td {
+            padding: 13px 12px;
+            text-align: left;
+            border-bottom: 1px solid #263449;
+            vertical-align: top;
+        }
+        th { color: #93c5fd; font-size: 13px; }
+        td { font-size: 14px; }
+        .tag {
+            display: inline-block;
+            background: #1e3a5f;
+            color: #bfdbfe;
+            border-radius: 6px;
+            padding: 5px 8px;
+            white-space: nowrap;
+        }
+        a { color: #60a5fa; }
+        footer { padding: 20px 6%; color: #9ca3af; font-size: 13px; }
+        @media (max-width: 600px) {
+            main { padding: 20px 4%; }
+            header { padding: 20px 4%; }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>OSINT-MLBC</h1>
+    <p>Open-Source Intelligence · Machine Learning · Blockchain</p>
+</header>
+
+<main>
+    <section class="cards">
+        <div class="card">
+            <span>CISA vulnerabilities loaded</span>
+            <h2>{{ total_records }}</h2>
+        </div>
+        <div class="card">
+            <span>Blocks in local ledger</span>
+            <h2>{{ total_blocks }}</h2>
+        </div>
+        <div class="card">
+            <span>Blockchain verification</span>
+            <h2 class="{{ 'status' if chain_valid else 'warning' }}">
+                {{ 'VALID' if chain_valid else 'INVALID' }}
+            </h2>
+        </div>
+    </section>
+
+    <section class="panel">
+        <h2>Vulnerability Intelligence</h2>
+        <p class="warning">
+            ML categories are predictions, not confirmed attack classifications.
+            Only selected records have been added to the blockchain ledger so far.
+        </p>
+
+        <div class="toolbar">
+            <input id="search" type="search"
+                   placeholder="Search CVE, vendor, product or vulnerability...">
+            <select id="category">
+                <option value="">All categories</option>
+                {% for record in records|map(attribute='category')|unique|sort %}
+                <option value="{{ record }}">{{ record|replace('_', ' ')|title }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <p id="count">Showing {{ records|length }} records</p>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>CVE</th>
+                        <th>Vulnerability</th>
+                        <th>Vendor / Product</th>
+                        <th>ML category</th>
+                        <th>Date added</th>
+                    </tr>
+                </thead>
+                <tbody id="threats">
+                    {% for record in records %}
+                    <tr>
+                        <td>
+                            <a href="https://nvd.nist.gov/vuln/detail/{{ record.cve }}"
+                               target="_blank" rel="noopener">
+                                {{ record.cve }}
+                            </a>
+                        </td>
+                        <td>
+                            <strong>{{ record.name }}</strong><br>
+                            {{ record.description }}
+                        </td>
+                        <td>{{ record.vendor }}<br>{{ record.product }}</td>
+                        <td><span class="tag">{{ record.category|replace('_', ' ') }}</span></td>
+                        <td>{{ record.date_added }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>
+
+<footer>
+    Educational project using public CISA KEV data. No CISA endorsement is implied.
+</footer>
+
+<script>
+const search = document.getElementById("search");
+const category = document.getElementById("category");
+const rows = [...document.querySelectorAll("#threats tr")];
+const count = document.getElementById("count");
+
+function filterRows() {
+    const query = search.value.toLowerCase().trim();
+    const selected = category.value;
+    let visible = 0;
+
+    rows.forEach(row => {
+        const matchesText = row.textContent.toLowerCase().includes(query);
+        const matchesCategory = !selected ||
+            row.cells[3].textContent.trim().replaceAll(" ", "_") === selected;
+
+        row.hidden = !(matchesText && matchesCategory);
+        if (!row.hidden) visible++;
+    });
+
+    count.textContent = `Showing ${visible} of ${rows.length} records`;
+}
+
+search.addEventListener("input", filterRows);
+category.addEventListener("change", filterRows);
+</script>
+</body>
+</html>
